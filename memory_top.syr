@@ -1,0 +1,490 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: memory_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "memory_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "memory_top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : memory_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/c/projects/memory/memory.v" into library work
+Parsing module <memory>.
+Analyzing Verilog file "/home/c/projects/memory/memory_top.v" into library work
+Parsing module <memory_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <memory_top>.
+WARNING:HDLCompiler:872 - "/home/c/projects/memory/memory_top.v" Line 51: Using initial value of clk_delay since it is never assigned
+
+Elaborating module <memory>.
+WARNING:HDLCompiler:872 - "/home/c/projects/memory/memory.v" Line 61: Using initial value of clk_buff since it is never assigned
+WARNING:HDLCompiler:413 - "/home/c/projects/memory/memory.v" Line 84: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/c/projects/memory/memory.v" Line 141: Result of 16-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "/home/c/projects/memory/memory.v" Line 82: Assignment to carrier ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/c/projects/memory/memory_top.v" Line 39: Net <addr[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/c/projects/memory/memory_top.v" Line 40: Net <data_i[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <memory_top>.
+    Related source file is "/home/c/projects/memory/memory_top.v".
+WARNING:Xst:653 - Signal <addr<31:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <data_i<7:4>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <addr<3>>.
+    Found 1-bit register for signal <addr<2>>.
+    Found 1-bit register for signal <addr<1>>.
+    Found 1-bit register for signal <addr<0>>.
+    Found 1-bit register for signal <data_i<3>>.
+    Found 1-bit register for signal <data_i<2>>.
+    Found 1-bit register for signal <data_i<1>>.
+    Found 1-bit register for signal <data_i<0>>.
+    Found 8-bit register for signal <data_o>.
+    Found 1-bit register for signal <we>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal ram_data<7:0> may hinder XST clustering optimizations.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <memory_top> synthesized.
+
+Synthesizing Unit <memory>.
+    Related source file is "/home/c/projects/memory/memory.v".
+WARNING:Xst:647 - Input <addr<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ram_wait> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 26-bit register for signal <addr_>.
+    Found 1-bit register for signal <cre>.
+    Found 1-bit register for signal <ce>.
+    Found 1-bit register for signal <adv>.
+    Found 1-bit register for signal <we>.
+    Found 1-bit register for signal <oe>.
+    Found 1-bit register for signal <ub>.
+    Found 1-bit register for signal <lb>.
+    Found 1-bit register for signal <in_rcr_mode>.
+    Found 16-bit register for signal <data_buff>.
+    Found 8-bit register for signal <data_o_buff>.
+    Found 4-bit register for signal <timer>.
+    Found 1-bit register for signal <done_buff>.
+    Found 1-bit register for signal <state>.
+    Found 6-bit register for signal <rcr_mode_state>.
+    Found 6-bit adder for signal <rcr_mode_state[5]_GND_2_o_add_4_OUT> created at line 84.
+    Found 4-bit adder for signal <timer[3]_GND_2_o_add_20_OUT> created at line 139.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  70 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <memory> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 6-bit adder                                           : 1
+# Registers                                            : 25
+ 1-bit register                                        : 19
+ 16-bit register                                       : 1
+ 26-bit register                                       : 1
+ 4-bit register                                        : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <data_buff_8> in Unit <M> is equivalent to the following 7 FFs/Latches, which will be removed : <data_buff_9> <data_buff_10> <data_buff_11> <data_buff_12> <data_buff_13> <data_buff_14> <data_buff_15> 
+WARNING:Xst:1710 - FF/Latch <addr__25> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__24> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__23> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__22> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__21> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__20> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__19> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__18> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__17> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__16> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__15> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__14> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__13> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__12> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__11> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__10> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__9> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__8> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__6> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr__5> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_buff_8> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_buff_7> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_buff_6> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_buff_5> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_buff_4> (without init value) has a constant value of 0 in block <M>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_o_4> of sequential type is unconnected in block <memory_top>.
+WARNING:Xst:2677 - Node <data_o_5> of sequential type is unconnected in block <memory_top>.
+WARNING:Xst:2677 - Node <data_o_6> of sequential type is unconnected in block <memory_top>.
+WARNING:Xst:2677 - Node <data_o_7> of sequential type is unconnected in block <memory_top>.
+WARNING:Xst:2404 -  FFs/Latches <data_buff<15:8>> (without init value) have a constant value of 0 in block <memory>.
+
+Synthesizing (advanced) Unit <memory>.
+The following registers are absorbed into counter <rcr_mode_state>: 1 register on signal <rcr_mode_state>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+Unit <memory> synthesized (advanced).
+WARNING:Xst:2677 - Node <data_o_4> of sequential type is unconnected in block <memory_top>.
+WARNING:Xst:2677 - Node <data_o_5> of sequential type is unconnected in block <memory_top>.
+WARNING:Xst:2677 - Node <data_o_6> of sequential type is unconnected in block <memory_top>.
+WARNING:Xst:2677 - Node <data_o_7> of sequential type is unconnected in block <memory_top>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 4-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <addr__5> in Unit <memory> is equivalent to the following 19 FFs/Latches, which will be removed : <addr__6> <addr__8> <addr__9> <addr__10> <addr__11> <addr__12> <addr__13> <addr__14> <addr__15> <addr__16> <addr__17> <addr__18> <addr__19> <addr__20> <addr__21> <addr__22> <addr__23> <addr__24> <addr__25> 
+INFO:Xst:2261 - The FF/Latch <data_buff_4> in Unit <memory> is equivalent to the following 3 FFs/Latches, which will be removed : <data_buff_5> <data_buff_6> <data_buff_7> 
+WARNING:Xst:1710 - FF/Latch <addr__5> (without init value) has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_buff_4> (without init value) has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <addr__4> in Unit <memory> is equivalent to the following FF/Latch, which will be removed : <addr__7> 
+WARNING:Xst:1710 - FF/Latch <data_o_buff_4> (without init value) has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_buff_5> (without init value) has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_buff_6> (without init value) has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_buff_7> (without init value) has a constant value of 0 in block <memory>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <memory_top> ...
+
+Optimizing unit <memory> ...
+INFO:Xst:2261 - The FF/Latch <M/lb> in Unit <memory_top> is equivalent to the following FF/Latch, which will be removed : <M/ub> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block memory_top, actual ratio is 0.
+FlipFlop M/in_rcr_mode has been replicated 1 time(s)
+FlipFlop M/rcr_mode_state_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : memory_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 58
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 6
+#      LUT3                        : 9
+#      LUT4                        : 11
+#      LUT5                        : 6
+#      LUT6                        : 18
+#      MUXF7                       : 3
+#      VCC                         : 1
+# FlipFlops/Latches                : 47
+#      FD                          : 14
+#      FDE                         : 24
+#      FDR                         : 1
+#      FDRE                        : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 67
+#      IBUF                        : 9
+#      OBUF                        : 58
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              47  out of  18224     0%  
+ Number of Slice LUTs:                   53  out of   9112     0%  
+    Number used as Logic:                53  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     70
+   Number with an unused Flip Flop:      23  out of     70    32%  
+   Number with an unused LUT:            17  out of     70    24%  
+   Number of fully used LUT-FF pairs:    30  out of     70    42%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          69
+ Number of bonded IOBs:                  68  out of    232    29%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 47    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.741ns (Maximum Frequency: 267.308MHz)
+   Minimum input arrival time before clock: 1.903ns
+   Maximum output required time after clock: 4.022ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.741ns (frequency: 267.308MHz)
+  Total number of paths / destination ports: 387 / 79
+-------------------------------------------------------------------------
+Delay:               3.741ns (Levels of Logic = 3)
+  Source:            M/rcr_mode_state_0 (FF)
+  Destination:       M/addr__3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: M/rcr_mode_state_0 to M/addr__3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             13   0.447   1.180  M/rcr_mode_state_0 (M/rcr_mode_state_0)
+     LUT4:I0->O            5   0.203   0.715  M/GND_2_o_GND_2_o_equal_6_o<5>11 (M/GND_2_o_GND_2_o_equal_6_o<5>1)
+     LUT5:I4->O            4   0.205   0.684  M/_n0267_inv212 (M/_n0267_inv21)
+     LUT4:I3->O            1   0.205   0.000  M/addr__3_rstpot (M/addr__3_rstpot)
+     FD:D                      0.102          M/addr__3
+    ----------------------------------------
+    Total                      3.741ns (1.162ns logic, 2.579ns route)
+                                       (31.1% logic, 68.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            sw<2> (PAD)
+  Destination:       addr_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<2> to addr_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  sw_2_IBUF (sw_2_IBUF)
+     FDE:D                     0.102          addr_2
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              4.022ns (Levels of Logic = 1)
+  Source:            M/done_buff (FF)
+  Destination:       led<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: M/done_buff to led<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              16   0.447   1.004  M/done_buff (M/done_buff)
+     OBUF:I->O                 2.571          led_4_OBUF (led<4>)
+    ----------------------------------------
+    Total                      4.022ns (3.018ns logic, 1.004ns route)
+                                       (75.0% logic, 25.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.741|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.97 secs
+ 
+--> 
+
+
+Total memory usage is 390656 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   51 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

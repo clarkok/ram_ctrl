@@ -1,0 +1,62 @@
+Net "clk" LOC=V10 | IOSTANDARD=LVCMOS33;
+
+Net "btnu" LOC = A8 | IOSTANDARD = LVCMOS33; #Bank = 0, pin name = IO_L33N, Sch name = BTNU
+
+# leds
+Net "led<0>" LOC = U16 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L2P_CMPCLK, Sch name = LD0
+Net "led<1>" LOC = V16 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L2N_CMPMOSI, Sch name = LD1
+Net "led<2>" LOC = U15 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L5P, Sch name = LD2
+Net "led<3>" LOC = V15 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L5N, Sch name = LD3
+Net "led<4>" LOC = M11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L15P, Sch name = LD4
+Net "led<5>" LOC = N11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L15N, Sch name = LD5
+Net "led<6>" LOC = R11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L16P, Sch name = LD6
+Net "led<7>" LOC = T11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L16N_VREF, Sch name = LD7
+
+# Switches
+Net "sw<0>" LOC = T10 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L29N_GCLK2, Sch name = SW0
+Net "sw<1>" LOC = T9 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L32P_GCLK29, Sch name = SW1
+Net "sw<2>" LOC = V9 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L32N_GCLK28, Sch name = SW2
+Net "sw<3>" LOC = M8 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L40P, Sch name = SW3
+Net "sw<4>" LOC = N8 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L40N, Sch name = SW4
+Net "sw<5>" LOC = U8 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L41P, Sch name = SW5
+Net "sw<6>" LOC = V8 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L41N_VREF, Sch name = SW6
+Net "sw<7>" LOC = T5 | IOSTANDARD = LVCMOS33; #Bank = MISC, pin name = IO_L48N_RDWR_B_VREF_2, Sch name = SW7
+
+Net "ram_addr<0>" LOC = K18  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L45N_A0_M1LDQSN, Sch name = P30-A0
+Net "ram_addr<1>" LOC = K17  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L45P_A1_M1LDQS, Sch name = P30-A1
+Net "ram_addr<2>" LOC = J18  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L44N_A2_M1DQ7, Sch name = P30-A2
+Net "ram_addr<3>" LOC = J16  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L44P_A3_M1DQ6, Sch name = P30-A3
+Net "ram_addr<4>" LOC = G18  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L38N_A4_M1CLKN, Sch name = P30-A4
+Net "ram_addr<5>" LOC = G16  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L38P_A5_M1CLK, Sch name = P30-A5
+Net "ram_addr<6>" LOC = H16  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L37N_A6_M1A1, Sch name = P30-A6
+Net "ram_addr<7>" LOC = H15  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L37P_A7_M1A0, Sch name = P30-A7
+Net "ram_addr<8>" LOC = H14  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L36N_A8_M1BA1, Sch name = P30-A8
+Net "ram_addr<9>" LOC = H13  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L36P_A9_M1BA0, Sch name = P30-A9
+Net "ram_addr<10>" LOC = F18  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L35N_A10_M1A2, Sch name = P30-A10
+Net "ram_addr<11>" LOC = F17  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L35P_A11_M1A7, Sch name = P30-A11
+Net "ram_addr<12>" LOC = K13  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L34N_A12_M1BA2, Sch name = P30-A12
+Net "ram_addr<13>" LOC = K12  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L34P_A13_M1WE, Sch name = P30-A13
+Net "ram_addr<14>" LOC = E18  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L33N_A14_M1A4, Sch name = P30-A14
+Net "ram_addr<15>" LOC = E16  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L33P_A15_M1A10, Sch name = P30-A15
+Net "ram_addr<16>" LOC = G13  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L32N_A16_M1A9, Sch name = P30-A16
+Net "ram_addr<17>" LOC = H12  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L32P_A17_M1A8, Sch name = P30-A17
+Net "ram_addr<18>" LOC = D18  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L31N_A18_M1A12, Sch name = P30-A18
+Net "ram_addr<19>" LOC = D17  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L31P_A19_M1CKE, Sch name = P30-A19
+Net "ram_addr<20>" LOC = G14  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L30N_A20_M1A11, Sch name = P30-A20
+Net "ram_addr<21>" LOC = F14  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L30P_A21_M1RESET Sch name = P30-A21
+Net "ram_addr<22>" LOC = C18  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L29N_A22_M1A14, Sch name = P30-A22
+Net "ram_addr<23>" LOC = C17  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L29P_A23_M1A13, Sch name = P30-A23
+Net "ram_addr<24>" LOC = F16  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L1N_A24_VREF, Sch name = P30-A24
+Net "ram_addr<25>" LOC = F15  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L1P_A25, Sch name = P30-A25
+
+# onBoard Cellular RAM, Numonyx StrataFlash and Numonyx Quad Flash
+Net "ram_oe" LOC = L18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L46N_FOE_B_M1DQ3, Sch name = P30-OE
+Net "ram_we" LOC = M16 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L47P_FWE_B_M1DQ0, Sch name = P30-WE
+Net "ram_adv" LOC = H18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L43N_GCLK4_M1DQ5, Sch name = P30-ADV
+Net "ram_wait" LOC = V4 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L63N, Sch name = P30-WAIT
+Net "ram_clk" LOC = R10 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L29P_GCLK3, Sch name = P30-CLK
+
+Net "ram_ce" LOC = L15 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L42P_GCLK7_M1UDM, Sch name = MT-CE
+Net "ram_cre" LOC = M18 |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L47N_LDC_M1DQ1, Sch name = MT-CRE
+Net "ram_ub" LOC = K15  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L41P_GCLK9_IRDY1_M1RASN, Sch name = MT-UB
+Net "ram_lb" LOC = K16  |  IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L41N_GCLK8_M1CASN, Sch name = MT-L

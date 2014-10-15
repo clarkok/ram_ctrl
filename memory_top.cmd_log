@@ -1,0 +1,69 @@
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+xst -intstyle ise -ifn "/home/c/projects/memory/memory_top.xst" -ofn "/home/c/projects/memory/memory_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memory_top.ucf -p xc6slx16-csg324-3 memory_top.ngc memory_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o memory_top_map.ncd memory_top.ngd memory_top.pcf 
+par -w -intstyle ise -ol high -mt off memory_top_map.ncd memory_top.ncd memory_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml memory_top.twx memory_top.ncd -o memory_top.twr memory_top.pcf -ucf memory_top.ucf 
+bitgen -intstyle ise -f memory_top.ut memory_top.ncd 
